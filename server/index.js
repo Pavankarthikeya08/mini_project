@@ -27,6 +27,7 @@ const connect = () => {
     mongoose.set('strictQuery', true);
     mongoose.connect(process.env.MONGO_URL).then(() => {
         console.log('MongoDB connected');
+        console.log("Mongo URL:", process.env.MONGO_URL);
     }).catch((err) => {
         console.log(err);
     });
